@@ -1,9 +1,9 @@
-const renderChart = data =>  console.log(data)
+const renderChart = data => console.log(data)
 
 const largeArray = []
 
 const workerCode = `
-  self.onmessage = function(e) {
+self.onmessage = function(e) {
     const data = e.data;
 
     // Step 1: Filter the data (for example, only even values)
@@ -20,20 +20,20 @@ const workerCode = `
 
     // Send the final processed data back to the main thread
     self.postMessage(finalData);
-  };
+};
 `;
 
-const workerBlob = new Blob([workerCode], { type: 'application/javascript' });
+const workerBlob = new Blob([workerCode], {type: 'application/javascript'});
 const workerURL = URL.createObjectURL(workerBlob);
 const myWorker = new Worker(workerURL);
 
 myWorker.postMessage(largeArray);
 
-myWorker.onmessage = function(e) {
+myWorker.onmessage = function (e) {
     const processedData = e.data;
     renderChart(processedData);
 };
 
-myWorker.onerror = function(e) {
+myWorker.onerror = function (e) {
     console.error('Worker error:', e.message);
 };
