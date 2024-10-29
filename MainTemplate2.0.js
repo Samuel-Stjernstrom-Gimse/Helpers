@@ -41,9 +41,8 @@ const asyncRefresh = (dataSource) =>
  * @throws {Error} If an error occurs while refreshing data sources or if the function fails.*/
 const asyncRefreshAll = async dataSources => {
     const promises = [...new Set(dataSources
-        .filter(ds => ds._internal?.dataObject))]
+        .filter(ds => ds?._internal?.dataObject))]
         .map(asyncRefresh);
-
     try {
         await Promise.all(promises);
     } catch (error) {
@@ -70,7 +69,10 @@ const app = async () => {
 
 app()
 
-/**
+/*##################################################################################################################*/
+/*----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----| DOC |---*/
+
+/** || BASIC FUNCTIONS ||
  * @see {@link appState}
        - The only place to define global variables.
        
@@ -90,3 +92,20 @@ app()
        - Main application function that loads data sources and orchestrates function calls.
        - Keep the main function concise; use `await` before data handlers for clarity.
  */
+
+/** || APP SPECIFIC DOCUMENTATION HERE ||
+ * 
+ * 
+ * 
+ * 
+ */
+
+/** || APP TODO LIST || 
+ * - [X] Make me.
+ * - [ ] 
+ * - [ ] 
+ * - [ ] 
+ * - [ ] 
+*/
+
+
