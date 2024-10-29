@@ -31,7 +31,7 @@ const asyncRefresh = dataSource =>
  */
 const asyncRefreshAll = async dataSources => {
     const uniqueDataSources = new Set(dataSources
-        .filter(ds => ds && typeof ds === 'object'));
+        .filter(ds =>  ds._internal.dataObject));
 
     const promises = [...uniqueDataSources]
         .map(asyncRefresh);
