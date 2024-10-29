@@ -69,43 +69,40 @@ const app = async () => {
 
 app()
 
-/*##################################################################################################################*/
-/*----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----X----| DOC |---*/
+/*######X#######X##################X#################X############X#############X#############X##########X##########*/
 
-/** || BASIC FUNCTIONS ||
+/** ??????????????????????????????????????????????????????????????????????????????????????????????????? BASIC FUNCTIONS 
  * @see {@link appState}
-       - The only place to define global variables.
-       
+ - The only place to define global variables.
+
  * @see {@link handleError}
-       - Custom generic error handling; prompts the user with error messages.
-       - Remember to put your own logic here 
+ - Custom generic error handling; prompts the user with error messages.
+ - Remember to put your own logic here
 
  * @see {@link asyncRefresh}
-       - Can be used inside async functions; supports both `await` and direct invocation.
+ - Can be used inside async functions; supports both `await` and direct invocation.
 
  * @see {@link asyncRefreshAll}
-       - Refreshes data sources in parallel; returns a promise that resolves if successful.
-       - Can be used inside async functions; dependent on the provided data sources.
-       - Supports both `await` and direct invocation.
+ - Refreshes data sources in parallel; returns a promise that resolves if successful.
+ - Can be used inside async functions; dependent on the provided data sources.
+ - Supports both `await` and direct invocation.
 
  * @see {@link app}
-       - Main application function that loads data sources and orchestrates function calls.
-       - Keep the main function concise; use `await` before data handlers for clarity.
+ - Main application function that loads data sources and orchestrates function calls.
+ - Keep the main function concise; use `await` before data handlers for clarity.
  */
 
-/** || APP SPECIFIC DOCUMENTATION HERE ||
- * 
- * 
- * 
- * 
+/** @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ APP SPECIFIC DOCUMENTATION HERE 
+ *
+ *
+ *
+ *
  */
 
-/** || APP TODO LIST || 
+/** ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤ TODO LIST 
  * - [X] Make me.
- * - [ ] 
- * - [ ] 
- * - [ ] 
- * - [ ] 
-*/
-
-
+ * - [ ]
+ * - [ ]
+ * - [ ]
+ * - [ ]
+ */
