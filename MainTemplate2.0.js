@@ -30,10 +30,8 @@ const asyncRefresh = dataSource =>
  * @throws {Error} If an error occurs while refreshing data sources or if the function fails.
  */
 const asyncRefreshAll = async dataSources => {
-    const uniqueDataSources = new Set(dataSources
-        .filter(ds =>  ds._internal.dataObject));
-
-    const promises = [...uniqueDataSources]
+    const promises = [...new Set(dataSources
+        .filter(ds => ds._internal.dataObject))]
         .map(asyncRefresh);
 
     try {
