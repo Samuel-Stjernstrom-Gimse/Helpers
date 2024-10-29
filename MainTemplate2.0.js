@@ -76,6 +76,7 @@ app()
        
  * @see {@link handleError}
        - Custom generic error handling; prompts the user with error messages.
+       - Remember to put your own logic here 
 
  * @see {@link asyncRefresh}
        - Can be used inside async functions; supports both `await` and direct invocation.
