@@ -87,7 +87,7 @@ class HelloWorldComponent extends Component {
     }
 }
 
-class ImageComponent extends Component {
+class ComponentTest extends Component {
     state = new State([2, 2, 2]);
 
     constructor(containerId) {
@@ -117,5 +117,4 @@ const textState = new State('Hello Samuel!');
 // Initialize the components
 new CounterComponent(counterState, 'app');
 new HelloWorldComponent('app2');
-new ImageComponent('app3');
-
+new ComponentTest('app3');
